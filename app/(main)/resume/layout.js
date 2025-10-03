@@ -1,0 +1,15 @@
+import React, { Suspense } from 'react'
+import { BarLoader } from 'react-spinners'
+
+const Layout = ({children}) => {
+  return (
+    <div children="px-5">
+      <Suspense
+      fallback={<BarLoader className='mt-4 width={"100%"} colors="gray"'/>}>
+        {children}
+      </Suspense>
+    </div>
+  )
+}
+
+export default Layout
